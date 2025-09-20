@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Rule Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">E-commerce Automation</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/products">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/products/dashboard">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/products/rules">Rules</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container my-5">
+    <h1 class="mb-4">Rule Engine Dashboard</h1>
+
+    <h2 class="mb-3">Product Summary</h2>
+    <div class="row mb-4">
+        <div th:each="entry : ${productCounts}" class="col-md-4 mb-3">
+            <div class="card text-white bg-dark">
+                <div class="card-body">
+                    <h5 class="card-title" th:text="${entry.key} + ' Products'"></h5>
+                    <p class="card-text fs-2" th:text="${entry.value}"></p>
+                </div>
+            </div>
+        </div>
+        <div th:if="${productCounts.isEmpty()}" class="col-md-4 mb-3">
+            <div class="card text-white bg-secondary">
+                <div class="card-body">
+                    <h5 class="card-title">No Products Found</h5>
+                    <p class="card-text fs-2">0</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-between mb-4">
+        <form th:action="@{/products/dashboard/run}" method="post">
+            <button type="submit" class="btn btn-warning">Run Rule Engine Manually</button>
+        </form>
+        <a th:href="@{/products}" class="btn btn-secondary">Back to Products</a>
+    </div>
+
+    <h2 class="mb-3">Execution Log</h2>
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+        <tr>
+            <th>Timestamp</th>
+            <th>Message</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:if="${ruleLog.isEmpty()}">
+            <td colspan="2">No rules have been executed yet.</td>
+        </tr>
+        <tr th:each="logEntry : ${ruleLog}">
+            <td th:text="${logEntry.timestamp}"></td>
+            <td th:text="${logEntry.message}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
