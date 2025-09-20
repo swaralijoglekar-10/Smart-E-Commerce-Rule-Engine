@@ -38,9 +38,8 @@ This project is a sophisticated e-commerce product catalog application built usi
     git clone https://github.com/swaralijoglekar-10/Smart-E-Commerce-Rule-Engine.git
    
 2.  **Configure API Key**: Get a free API key from [ExchangeRate-API](https://www.exchangerate-api.com/).
-3.  **Update `application.properties.example`**: Copy the provided example file to `src/main/resources/application.properties` and add your currency API key.
+3.  **Update `application.properties.example`**: Update `src/main/resources/application.properties` to add your currency API key.
     ```properties
-    # ... other properties
     api.currency.key= MY_API_KEY
     ```
 4.  **Run the application**: Use your IDE (e.g., IntelliJ IDEA) or Maven to run the `SmartEcommerceApplication.java` file.
