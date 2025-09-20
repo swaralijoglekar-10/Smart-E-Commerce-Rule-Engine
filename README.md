@@ -14,18 +14,22 @@ This project is a sophisticated e-commerce product catalog application built usi
     * **Execution Dashboard**: A dashboard that provides a summary of product statuses and a log of the rule engine's actions.
 
 ### Screenshots
-| Product List |
+| Product list before running the rule engine|
 | :---: |
-| <img width="975" height="437" alt="image" src="https://github.com/user-attachments/assets/60e79a81-9a0d-4c79-a97b-690a13118f45" /> | 
+| <img width="975" height="448" alt="image" src="https://github.com/user-attachments/assets/a82f377a-8455-45da-b31e-e3a609ccaa65" /> |
+
+| Product list after running the rule engine|
+| :---: |
+| <img width="975" height="437" alt="image" src="https://github.com/user-attachments/assets/354769bb-d5c5-4d4e-905c-f3b0b0989f12" /> | 
 
 | Dashboard |
 | :---: |
-| <img width="975" height="376" alt="image" src="https://github.com/user-attachments/assets/e08d77cb-6a1e-4669-9a3e-e1ea8667eef1" /> |
-| <img width="975" height="494" alt="image" src="https://github.com/user-attachments/assets/364d90a3-5685-42b1-b27c-315d2a4e76bb" /> |
+| <img width="975" height="376" alt="image" src="https://github.com/user-attachments/assets/0dbbef8b-da86-48e5-9263-f21aaaf4fb92" /> |
+| <img width="975" height="494" alt="image" src="https://github.com/user-attachments/assets/fa744ad4-3c3c-495c-9814-5c456bce0695" /> |
 
 | Rules |
 | :---: |
-| <img width="975" height="385" alt="image" src="https://github.com/user-attachments/assets/dfd417c7-97be-4ece-8457-2df095796ca1" /> |
+| <img width="975" height="385" alt="image" src="https://github.com/user-attachments/assets/706f52fa-f63c-49bb-bb83-8f70e93fe1ba" /> |
 
 
 ### How to Run the Project
